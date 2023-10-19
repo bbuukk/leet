@@ -15,7 +15,7 @@ var expect = function (val) {
       if (unexpected !== val) {
         return true;
       } else {
-        throw new Error("Not Equal");
+        throw new Error("Equal");
       }
     },
   };

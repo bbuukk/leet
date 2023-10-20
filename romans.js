@@ -13,16 +13,12 @@ const romansNums = {
   M: 1000,
 };
 
-function getRomanValue(char) {
-  return romansNums[char] || 0; // Return 0 if the character is not found
-}
-
 var romanToInt = function (s) {
   let result = 0;
 
   for (let i = 0; i < s.length; i++) {
-    let current = getRomanValue(s[i]);
-    const next = getRomanValue(s[i + 1]);
+    let current = romansNums[s[i]];
+    const next = romansNums[s[i + 1]];
 
     if (next > current) {
       current = next - current;
@@ -34,5 +30,5 @@ var romanToInt = function (s) {
   return result;
 };
 
-console.log(romanToInt("LVIII"));
-console.log(romanToInt("MCMXCIV"));
+// console.log(romanToInt("LVIII"));
+// console.log(romanToInt("MCMXCIV"));
